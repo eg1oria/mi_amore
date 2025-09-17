@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="250" height="80" viewBox="0 0 250 80" fill="none">
-  <text x="20" y="55" font-family="Jost, Inter, sans-serif" font-size="48" font-weight="700" fill="#4F46E5">
-    { }
-  </text>
-
-  <text x="90" y="55" font-family="Jost, Inter, sans-serif" font-size="32" font-weight="700" fill="#111827">
-    Saku <tspan fill="#4F46E5">Dev</tspan>
-  </text>
-</svg>
