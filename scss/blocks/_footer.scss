@@ -1,0 +1,40 @@
+.footer {
+    background-color: #fcc73727;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contacts-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__contacts-mail {
+        color: rgb(48, 32, 12);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__contacts-phone {
+        color: rgb(48, 32, 12);
+        display: block;
+        opacity: 1;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

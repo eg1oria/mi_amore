@@ -1,0 +1,107 @@
+.basket {
+  background-color: $color-white;
+  border-radius: 8px;
+  padding: 16px;
+  position: absolute;
+  left: 20%;
+  top: calc(100%);
+  box-shadow: 0 10px 60px 0 #4848481A;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.3s linear , transform 0.3s linear;
+  z-index: 10;
+  width: a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  &__empty-block {
+    text-align: center;
+    padding: 40px;
+    width: 366px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+  }
+
+  &__item {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 60px 170px 76px 20px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+  }
+
+  &__img {
+    align-items: flex-start;
+    background-color: rgb(182, 176, 176);
+    border-radius: 6px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    width: 60px;
+    overflow: hidden;
+
+    &__item-close {
+      width: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background-color: #fff;
+    }
+
+
+    img {
+      height: 60px;
+      object-fit: contain;
+      width: 60px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 10px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid brown;
+    border-radius: 8px;
+    margin: 10px 0 0 0;
+    transition: background 0.2s linear;
+
+    &:hover {
+      background-color: rgba(250, 128, 114, 0.356);
+    }
+  }
+}
+
+.main__menu-icon {
+  padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

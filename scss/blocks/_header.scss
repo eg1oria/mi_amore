@@ -152,6 +152,8 @@
         display: flex;
         padding: 10px 10px;
         border-radius: 16px;
+        gap: 10px;
+        align-items: center;
 
         &:hover {
             background-color: rgba(45, 45, 51, 0.062);

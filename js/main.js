@@ -1,103 +1,44 @@
-const roseBtn = document.querySelector("#roseBtn")
-const toulBtn = document.querySelector("#toulBtn")
-const sunflBtn = document.querySelector("#sunflBtn")
-const irisBtn = document.querySelector("#irisBtn")
+import { Card } from "./flowersCard.js";
+import { cardsData } from "./flowersMassive.js";
+import { btnFunc } from "./buttonsCatalog.js";
+import { basketActive, renderBasket } from "./basket.js";
 
-const allBtn = document.querySelector("#all")
-
-const listCont = document.querySelectorAll('.main__right-item')
-
-const loadMoreBtn = document.querySelector("#loadMore");
 
 document.addEventListener('DOMContentLoaded', () => {
-    listCont.forEach(item => {
-        if (!item.classList.contains("more")) {
-            item.style.display = "none";
-        }
-    });
-})
+  const list = document.querySelector('.main__right-list');
 
-roseBtn.addEventListener('click', () => {
-    listCont.forEach(item => {
-        item.style.display = "flex";
-    });
-    listCont.forEach(item => {
-        if (!item.classList.contains("rose")) {
-            item.style.display = "none";
-            loadMoreBtn.disabled = true;
-        loadMoreBtn.textContent = "Это всё ("
-        }
-    });
-});
+  cardsData.forEach(data => {
+    const card = new Card(data);
+    list.append(card.render());
+  });
 
-irisBtn.addEventListener('click', () => {
-    listCont.forEach(item => {
-        item.style.display = "flex";
-    });
-    listCont.forEach(item => {
-        if (!item.classList.contains("iris")) {
-            item.style.display = "none";
-            loadMoreBtn.disabled = true;
-        loadMoreBtn.textContent = "Это всё ("
-        }
-    });
-});
+  btnFunc()
+  basketActive()
+  renderBasket()
 
-sunflBtn.addEventListener('click', () => {
-    listCont.forEach(item => {
-        item.style.display = "flex";
-    });
-    listCont.forEach(item => {
-        if (!item.classList.contains("sunfl")) {
-            item.style.display = "none";
-            loadMoreBtn.disabled = true;
-        loadMoreBtn.textContent = "Это всё ("
-        }
-    });
-});
+  function addToBasket(title, price, imgSrc) {
+  const basketList = document.querySelector(".basket__list");
+  const emptyBlock = document.querySelector(".basket__empty-block");
 
-toulBtn.addEventListener('click', () => {
-    listCont.forEach(item => {
-        item.style.display = "flex";
-    });
-    listCont.forEach(item => {
-        if (!item.classList.contains("toul")) {
-            item.style.display = "none";
-            loadMoreBtn.disabled = true;
-        loadMoreBtn.textContent = "Это всё ("
-        }
-    });
-});
+  // читаем текущую корзину из localStorage (или пустой массив)
+  let basket = JSON.parse(localStorage.getItem("basket")) || [];
 
-let itemsToShow = 6;
+  // создаём объект товара
+  const item = { title, price, imgSrc };
 
-function showItems() {
-    for (let i = 0; i < itemsToShow && i < listCont.length; i++) {
-        listCont[i].style.display = "flex";
-    }
+  // добавляем в массив
+  basket.push(item);
+
+  // сохраняем обратно
+  localStorage.setItem("basket", JSON.stringify(basket));
+
+  // обновляем интерфейс
+  renderBasket();
 }
-
-showItems();
-
-loadMoreBtn.addEventListener("click", () => {
-    itemsToShow += 3;
-    showItems();
-    if (itemsToShow >= listCont.length) {
-        loadMoreBtn.disabled = true;
-        loadMoreBtn.textContent = "Это всё ("
-    }
 });
 
-allBtn.addEventListener('click', () => {
-    listCont.forEach(item => {
-        item.style.display = "flex";
-    });
-    itemsToShow = 6
-    listCont.forEach(item => {
-        if (!item.classList.contains("more")) {
-            item.style.display = "none";
-            loadMoreBtn.disabled = false;
-            loadMoreBtn.textContent = "Показать ещё"
-        }
-    });
-});
+
+
+
+
+

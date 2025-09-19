@@ -13,7 +13,7 @@
 
     &__right-item {
         padding: 10px 30px 20px 30px;
-        display: none; 
+        display: flex; 
         flex-direction: column;
         border: 1px solid rgba(10, 7, 7, 0.068);
         border-radius: 6px;
@@ -179,4 +179,9 @@
         border-color: gray;
         cursor: default;
     }
+}
+
+
+.added {
+    background-color: rgba(250, 128, 114, 0.356);
 }
