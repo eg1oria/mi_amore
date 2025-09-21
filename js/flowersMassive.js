@@ -1,6 +1,6 @@
 export const cardsData = [
     {
-        title: 'Watered bouquet',
+        title: 'Morning Dew',
         subtitle: 'Ирисы',
         price: '10 000 ₸/шт',
         img: './images/img1.jpeg',
@@ -14,115 +14,115 @@ export const cardsData = [
         classes: ['more', 'rose']
     },
     {
-        title: '"Feast of the Soul"',
+        title: 'Feast of the Soul',
         subtitle: 'Розы',
         price: '10 000 ₸/шт',
         img: './images/img3.jpeg',
-        classes: ['more', 'rose']  // передаём классы как массив
+        classes: ['more', 'rose']
     },
     {
         title: 'Royal Charm',
         subtitle: 'Розы',
         price: '10 000 ₸/шт',
         img: './images/img4.jpeg',
-        classes: ['more', 'rose']  // передаём классы как массив
+        classes: ['more', 'rose']
     },
     {
         title: 'Heart in Flowers',
         subtitle: 'Тюльпаны',
         price: '10 000 ₸/шт',
         img: './images/img5.jpeg',
-        classes: ['more', 'toul']  // передаём классы как массив
+        classes: ['more', 'toul']
     },
     {
-        title: '"Love Story"',
+        title: 'Love Story',
         subtitle: 'Розы',
         price: '10 000 ₸/шт',
         img: './images/img6.jpeg',
-        classes: ['more', 'rose']  // передаём классы как массив
+        classes: ['more', 'rose']
     },
     {
         title: 'Moon Kiss',
         subtitle: 'Подсолнух',
         price: '10 000 ₸/шт',
         img: './images/img7.jpeg',
-        classes: ['sunfl']  // передаём классы как массив
+        classes: ['sunfl']
     },
     {
-        title: '“Blue Lagoon”',
+        title: 'Blue Lagoon',
         subtitle: 'Ирисы',
         price: '10 000 ₸/шт',
         img: './images/img8.jpeg',
-        classes: ['iris']  // передаём классы как массив
+        classes: ['iris']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Spring Delight',
         subtitle: 'Тюльпаны',
         price: '10 000 ₸/шт',
         img: './images/img9.jpeg',
-        classes: ['toul']  // передаём классы как массив
+        classes: ['toul']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Golden Smile',
         subtitle: 'Подсолнух',
         price: '10 000 ₸/шт',
         img: './images/img10.jpeg',
-        classes: ['sunfl']  // передаём классы как массив
+        classes: ['sunfl']
     },
     {
-        title: 'Moon Kiss',
+        title: 'Sunny Breeze',
         subtitle: 'Подсолнух',
         price: '10 000 ₸/шт',
         img: './images/img11.jpeg',
-        classes: ['sunfl']  // передаём классы как массив
+        classes: ['sunfl']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Tulip Charm',
         subtitle: 'Тюльпаны',
         price: '10 000 ₸/шт',
         img: './images/img12.jpeg',
-        classes: ['toul']  // передаём классы как массив
+        classes: ['toul']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Rose Whisper',
         subtitle: 'Розы',
         price: '10 000 ₸/шт',
         img: './images/img13.jpeg',
-        classes: ['rose']  // передаём классы как массив
+        classes: ['rose']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Purple Dream',
         subtitle: 'Ирисы',
         price: '10 000 ₸/шт',
         img: './images/img14.jpeg',
-        classes: ['iris']  // передаём классы как массив
+        classes: ['iris']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Blue Elegance',
         subtitle: 'Ирисы',
         price: '10 000 ₸/шт',
         img: './images/img15.jpg',
-        classes: ['iris']  // передаём классы как массив
+        classes: ['iris']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Crimson Charm',
         subtitle: 'Розы',
         price: '10 000 ₸/шт',
         img: './images/img16.jpeg',
-        classes: ['rose']  // передаём классы как массив
+        classes: ['rose']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Blush of Love',
         subtitle: 'Розы',
         price: '10 000 ₸/шт',
         img: './images/img17.jpeg',
-        classes: ['rose']  // передаём классы как массив
+        classes: ['rose']
     },
     {
-        title: 'Watered bouquet',
+        title: 'Tulip Symphony',
         subtitle: 'Тюльпаны',
         price: '10 000 ₸/шт',
         img: './images/img18.jpeg',
-        classes: ['toul']  // передаём классы как массив
+        classes: ['toul']
     },
 ];

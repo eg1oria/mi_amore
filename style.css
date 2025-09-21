@@ -422,7 +422,7 @@ ul {
   pointer-events: none;
   transition: opacity 0.3s linear, transform 0.3s linear;
   z-index: 10;
-  width: a;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -434,8 +434,8 @@ ul {
 }
 .basket__empty-block {
   text-align: center;
-  padding: 40px;
-  width: 366px;
+  padding: 40px 100px;
+  width: auto;
 }
 .basket__list {
   display: flex;
@@ -448,36 +448,34 @@ ul {
 .basket__item {
   display: grid;
   gap: 20px;
-  grid-template-columns: 60px 170px 76px 20px;
+  grid-template-columns: 75px 115px 1fr 40px;
   align-items: center;
   font-size: 14px;
   font-weight: 500;
   line-height: 16.8px;
+  border: 1px solid burlywood;
+  padding: 10px 20px 10px 10px;
+  border-radius: 12px;
+  transition: background 0.1s linear;
+}
+.basket__item:hover {
+  background-color: rgba(222, 184, 135, 0.151);
 }
 .basket__img {
   align-items: flex-start;
-  background-color: rgb(182, 176, 176);
+  background-color: white;
   border-radius: 6px;
   display: flex;
-  height: 60px;
+  height: 75px;
   justify-content: center;
-  width: 60px;
+  width: 75px;
   overflow: hidden;
 }
-.basket__img__item-close {
-  width: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #fff;
-}
 .basket__img img {
-  height: 60px;
+  height: 75px;
   -o-object-fit: contain;
      object-fit: contain;
-  width: 60px;
+  width: 75px;
 }
 .basket__link {
   display: flex;
@@ -498,14 +496,25 @@ ul {
   padding: 0;
   width: 20px;
   height: 20px;
-  background-color: transparent;
-  border: none;
+}
+
+.basket__item-close {
+  width: 40px;
+  height: 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.2s linear, box-shadow 0.1s linear;
+}
+.basket__item-close:hover {
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  box-shadow: 0 0 5px 1px rgba(224, 38, 17, 0.568);
 }
 
 .footer {

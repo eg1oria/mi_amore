@@ -23,25 +23,10 @@ export class Card {
         <span class="main__item-price">${this.price}</span>
       </div>
       <div class="main__buttons">
-        <button class="main__buy-button">В корзину</button>
+        <button class="main__buy-button" data-title="${this.title}">В корзину</button>
       </div>
     `;
 
-
-    // Находим кнопку
-    const button = li.querySelector('.main__buy-button');
-
-    // Вешаем событие
-    button.addEventListener('click', () => {
-      button.classList.toggle('added');
-      if (button.classList.contains('added')) {
-        button.textContent = 'В корзине';
-        button.background = "rgba(250, 128, 114, 0.356)";
-        button.disabled = true;
-      } else {
-        button.textContent = 'В корзину';
-      }
-    });
 
     return li;
   }

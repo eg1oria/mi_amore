@@ -1,3 +1,5 @@
+import { getItems, setItems } from "./storage.js";
+
 export function basketActive() {
     const basketBtn = document.querySelector('.header__search-button')
     const basketCont = document.querySelector('.header__basket')
@@ -12,19 +14,36 @@ export function renderBasket() {
     const basketList = basket.querySelector(".basket__list");
     const emptyBlock = basket.querySelector(".basket__empty-block");
 
+    const savedItems = getItems();
+    if (savedItems.length > 0) {
+        emptyBlock.style.display = "none";
+        savedItems.forEach(item => addToBasket(item.title, item.price, item.imgSrc, false));
+    }
     document.querySelectorAll(".main__buy-button").forEach((btn) => {
+
         btn.addEventListener("click", () => {
             const card = btn.closest(".main__right-item");
             if (!card) return;
 
-    const titleEl = card.querySelector(".main__item-title");
-    const priceEl = card.querySelector(".main__item-price");
-    const imgEl = card.querySelector(".main__img");
+            const titleEl = card.querySelector(".main__item-title");
+            const priceEl = card.querySelector(".main__item-price");
+            const imgEl = card.querySelector(".main__img");
 
-    const title = titleEl ? titleEl.textContent : "Без названия";
-    const price = priceEl ? priceEl.textContent : "0 ₸";
-    const imgSrc = imgEl ? imgEl.getAttribute("src") : "images/placeholder.png";
+            const title = titleEl ? titleEl.textContent : "Без названия";
+            const price = priceEl ? priceEl.textContent : "0 ₸";
+            const imgSrc = imgEl ? imgEl.getAttribute("src") : "images/placeholder.png";
 
+            const items = getItems();
+            const newItem = { title, price, imgSrc };
+            items.push(newItem);
+
+
+
+            setItems(items);
+
+            btn.textContent = "В корзине";
+            btn.classList.add("added");
+            btn.disabled = true;
             addToBasket(title, price, imgSrc);
         });
     });
@@ -50,12 +69,41 @@ export function renderBasket() {
 
         li.querySelector(".basket__item-close").addEventListener("click", () => {
             li.remove();
+
+            let items = getItems();
+            items = items.filter(item => !(item.title === title && item.price === price && item.imgSrc === imgSrc));
+            setItems(items);
+
+            const btn = document.querySelector(`.main__buy-button[data-title="${title}"]`);
+            if (btn) {
+                btn.textContent = "В корзину";
+                btn.classList.remove("added");
+                btn.disabled = false;
+            }
+
             if (basketList.children.length === 0) {
                 emptyBlock.style.display = "block";
             }
         });
 
+
+
         basketList.appendChild(li);
+    }
+
+    updateButtonsState();
+
+    function updateButtonsState() {
+        const items = getItems();
+
+        items.forEach(item => {
+            const btn = document.querySelector(`.main__buy-button[data-title="${item.title}"]`);
+            if (btn) {
+                btn.textContent = "В корзине";
+                btn.classList.add("added");
+                btn.disabled = true;
+            }
+        });
     }
 }
 

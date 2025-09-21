@@ -15,30 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   btnFunc()
   basketActive()
   renderBasket()
-
-  function addToBasket(title, price, imgSrc) {
-  const basketList = document.querySelector(".basket__list");
-  const emptyBlock = document.querySelector(".basket__empty-block");
-
-  // читаем текущую корзину из localStorage (или пустой массив)
-  let basket = JSON.parse(localStorage.getItem("basket")) || [];
-
-  // создаём объект товара
-  const item = { title, price, imgSrc };
-
-  // добавляем в массив
-  basket.push(item);
-
-  // сохраняем обратно
-  localStorage.setItem("basket", JSON.stringify(basket));
-
-  // обновляем интерфейс
-  renderBasket();
-}
 });
-
-
-
 
 
 
