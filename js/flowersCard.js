@@ -8,7 +8,6 @@ export class Card {
   }
   
 
-  // Метод для создания DOM-элемента карточки
   render() {
     const li = document.createElement('li');
     li.classList.add('main__right-item', ...this.classes);

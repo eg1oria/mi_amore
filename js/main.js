@@ -15,14 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btnFunc();
   }
 
-  // корзина
   const basket = document.querySelector('.basket');
   if (basket) {
     basketActive();
     renderBasket();
   }
 
-  // страница оплаты
   const payList = document.querySelector('.pay__list');
   if (!payList) {
     renderPayPage();

@@ -33,13 +33,12 @@ export function renderPayPage() {
         let total = 0;
 
 savedItems.forEach(item => {
-    let priceNum = Number(item.price.replace(/\D/g, '')); // получаем число
-    priceNum += summ; // добавляем, если нужно
-    item.price = `${priceNum} ₸`; // обновляем объект
-    total += priceNum; // суммируем все
+    let priceNum = Number(item.price.replace(/\D/g, ''));
+    priceNum += summ;
+    item.price = `${priceNum} ₸`;
+    total += priceNum;
 });
 
-// выводим общую сумму
 if (paySumm) {
     paySumm.textContent = `Общая сумма: ${total} ₸`;
 }
