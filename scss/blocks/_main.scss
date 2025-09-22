@@ -132,17 +132,30 @@
 
     &__left-button {
         width: 100%;
-        padding: 10px;
         border: 1px solid brown;
         background-color: transparent;
         border-radius: 8px;
         transition: background-color 0.2s linear;
         cursor: pointer;
+        display: flex;
 
         &:hover {
             background-color: rgba(250, 128, 114, 0.356);
         }
+
+        a {
+            width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        transition: background-color 0.2s linear;
+        color: #000;
+        text-decoration: none;
+        }
     }
+}
+
+#catalog {
+    scroll-margin-top: 100px;
 }
 
 #all {

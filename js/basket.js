@@ -3,9 +3,19 @@ export function basketActive() {
     const basketBtn = document.querySelector('.header__search-button')
     const basketCont = document.querySelector('.header__basket')
 
-    basketBtn.addEventListener('click', () => {
-        basketCont.classList.toggle('basket--active')
-    })
+    basketBtn.addEventListener('click', (event) => {
+        basketCont.classList.toggle('basket--active');
+    });
+
+    basketCont.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    window.addEventListener('click', (event) => {
+        if (!basketBtn.contains(event.target) && !basketCont.contains(event.target)) {
+            basketCont.classList.remove('basket--active');
+        }
+    });
 }
 
 export function renderBasket() {
