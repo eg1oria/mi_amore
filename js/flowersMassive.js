@@ -9,14 +9,14 @@ export const cardsData = [
     {
         title: 'Scarlet Wings',
         subtitle: 'Розы',
-        price: '10 000 ₸/шт',
+        price: '12 000 ₸/шт',
         img: './images/img2.jpeg',
         classes: ['more', 'rose']
     },
     {
         title: 'Feast of the Soul',
         subtitle: 'Розы',
-        price: '10 000 ₸/шт',
+        price: '8 500 ₸/шт',
         img: './images/img3.jpeg',
         classes: ['more', 'rose']
     },

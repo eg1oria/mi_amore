@@ -1,5 +1,4 @@
 import { getItems, setItems } from "./storage.js";
-
 export function basketActive() {
     const basketBtn = document.querySelector('.header__search-button')
     const basketCont = document.querySelector('.header__basket')
@@ -13,9 +12,12 @@ export function renderBasket() {
     const basket = document.querySelector(".basket");
     const basketList = basket.querySelector(".basket__list");
     const emptyBlock = basket.querySelector(".basket__empty-block");
+    const linkBtn = basket.querySelector(".basket__link");
+    
 
     const savedItems = getItems();
     if (savedItems.length > 0) {
+        linkBtn.style.display = "flex";
         emptyBlock.style.display = "none";
         savedItems.forEach(item => addToBasket(item.title, item.price, item.imgSrc, false));
     }
@@ -50,7 +52,7 @@ export function renderBasket() {
 
     function addToBasket(title, price, imgSrc) {
         emptyBlock.style.display = "none";
-
+        linkBtn.style.display = "flex";
         const li = document.createElement("li");
         li.classList.add("basket__item");
 
@@ -83,6 +85,7 @@ export function renderBasket() {
 
             if (basketList.children.length === 0) {
                 emptyBlock.style.display = "block";
+                linkBtn.style.display = "none";
             }
         });
 
@@ -90,6 +93,7 @@ export function renderBasket() {
 
         basketList.appendChild(li);
     }
+
 
     updateButtonsState();
 

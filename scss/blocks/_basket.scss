@@ -16,6 +16,22 @@
   flex-direction: column;
   align-items: center;
 
+  &__scroll {
+  max-height: 300px;      // высота блока, после которой появляется скролл
+  overflow-y: auto;       // вертикальный скролл
+  width: 100%;
+  padding-right: 5px;     // чтобы скролл не перекрывал контент
+} 
+
+.basket__scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.basket__scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.274);
+  border-radius: 3px;
+}
+
   &--active {
     opacity: 1;
     transform: translateY(0);
@@ -74,7 +90,7 @@
   }
 
   &__link {
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 7px 10px;
     color: #000;

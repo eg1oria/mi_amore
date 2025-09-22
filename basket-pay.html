@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="./js/main.js"></script>
+
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <header class="header">
         <div class="container">
             <div class="header__content">
@@ -17,29 +18,11 @@
                     <a href="/index.html" class="header__logo">
                         Mi Amore
                     </a>
-                    <div class="header__input-label">
-                        <button class="header__search-button">
-                            Корзина
-                            <svg class="header__search-icon" width="24" height="24" aria-hidden="true">
-                                <use xlink:href="images/sprite.svg#icon-basket"></use>
-                            </svg>
-                        </button>
-                        <div class="header__basket basket">
-                            <div class="basket__scroll">
-                                <ul class="basket__list">
-                            </ul>
-
-                            <div class="basket__empty-block">Корзина пока пуста</div>
-
-                            </div>
-                             <a class="basket__link btn" href="./basket-pay.html">Перейти к оформлению</a>
-                        </div>
-                    </div>
                 </div>
 
                 <ul class="header__nav">
                     <li class="header__nav-item">
-                        <a href="#catalog" class="header__nav-link">Услуги</a>
+                        <a href="index.html#catalog" class="header__nav-link">Услуги</a>
                     </li>
                     <li class="header__nav-item">
                         <a href="#" class="header__nav-link">О нас</a>
@@ -73,50 +56,37 @@
         </div>
     </header>
 
-    <div class="intro">
+    <main class="pay">
         <div class="container">
+            <div class="pay__content">
 
-            <div class="intro__content">
-                <p class="intro__logo">Mi Amore</p>
-                <h1 class="intro__title">Букеты на любой случай</h1>
-                <p class="intro__text">Собираем с любовью, доставляем аккуратно)</p>
-                <p class="intro__subtext">Первая доставка бесплатно по промокоду "MiAmore"</p>
+                <div class="pay__left">
+                <h1 class="pay__title">
+                    Ваша корзина:
+                </h1>
+                <ul class="pay__list"></ul>
             </div>
-        </div>
-    </div>
 
-    <main class="main">
-        <div class="container">
-            <div class="main__container">
-                <div class="main__left">
 
-                    <div class="main__left-content">
-                        <h4 class="main__left-title" >Каталог</h4>
-                        <ul class="main__left-list">
-                            <li class="main__left-item"><button id="all" class="main__left-button">Все букеты</button>
-                            </li>
-                            <li class="main__left-item"><button id="roseBtn" class="main__left-button">Розы</button>
-                            </li>
-                            <li class="main__left-item"><button id="toulBtn" class="main__left-button">Тюльпаны</button>
-                            </li>
-                            <li class="main__left-item"><button id="sunflBtn"
-                                    class="main__left-button">Подсолнухи</button></li>
-                            <li class="main__left-item"><button id="irisBtn" class="main__left-button">Ирисы</button>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="pay__right">
+                <div class="pay__right-content">
+                    <h3 class="pay__right-title">
+                    В корзине:
+                </h3>
+                <span class="pay__right-count"></span>
+                <p class="pay__right-summ"></p>
+
+                <button class="pay__right-btn">Заказать</button>
                 </div>
-
-                <div class="main__right" id="catalog">
-                    <h2 class="main__right-title">Букеты
-                    </h2>
-
-                    <ul class="main__right-list"></ul>
-                    <button id="loadMore">Показать ещё</button>
-                </div>
+                
             </div>
+
+            </div>
+            
         </div>
     </main>
+
+
 
     <footer class="footer">
         <div class="container">
@@ -140,6 +110,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script type="module" src="./js/main.js" defer></script>
 </body>
 
 </html>
