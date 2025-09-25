@@ -1,3 +1,5 @@
+
+
 export function btnFunc() {
 const roseBtn = document.querySelector("#roseBtn")
 const toulBtn = document.querySelector("#toulBtn")
@@ -9,6 +11,9 @@ const allBtn = document.querySelector("#all")
 const listCont = document.querySelectorAll('.main__right-item')
 
 const loadMoreBtn = document.querySelector("#loadMore");
+
+
+
 
     listCont.forEach(item => {
         if (!item.classList.contains("more")) {
@@ -100,4 +105,6 @@ allBtn.addEventListener('click', () => {
         }
     });
 });
+
+
 }

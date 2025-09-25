@@ -57,6 +57,7 @@
 
     &__buttons {
         display: flex;
+        flex-direction: column;
     }
 
     &__buy-button {
@@ -71,6 +72,13 @@
         &:hover {
             background-color: rgba(250, 128, 114, 0.356);
         }
+    }
+
+    &__count-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
 
     &__buttons {

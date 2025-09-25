@@ -310,6 +310,7 @@ ul {
 }
 .main__buttons {
   display: flex;
+  flex-direction: column;
 }
 .main__buy-button {
   width: 100%;
@@ -322,6 +323,12 @@ ul {
 }
 .main__buy-button:hover {
   background-color: rgba(250, 128, 114, 0.356);
+}
+.main__count-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 .main__buttons {
   margin: auto 0 0 0;
@@ -482,7 +489,7 @@ ul {
 .basket__item {
   display: grid;
   gap: 20px;
-  grid-template-columns: 75px 115px 1fr 40px;
+  grid-template-columns: 75px 115px 20px 1fr 40px;
   align-items: center;
   font-size: 14px;
   font-weight: 500;

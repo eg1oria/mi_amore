@@ -22,6 +22,11 @@ export class Card {
         <span class="main__item-price">${this.price}</span>
       </div>
       <div class="main__buttons">
+      <div class="main__count-container">
+        <button class="main__minus">-</button>
+    <p class="main__count">0</p>
+    <button class="main__plus">+</button>
+    </div>
         <button class="main__buy-button" data-title="${this.title}">В корзину</button>
       </div>
     `;
